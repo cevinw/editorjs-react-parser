@@ -13,17 +13,3 @@ exports[`Alert Block tests > Render alert snapshot test 1`] = `
   </section>
 </div>
 `;
-
-exports[`Render alert 1`] = `
-<div>
-  <section
-    class="p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg bg-green-100 text-green-800"
-  >
-    <div
-      class="text-center"
-    >
-      test
-    </div>
-  </section>
-</div>
-`;
