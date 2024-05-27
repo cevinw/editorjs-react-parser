@@ -1,0 +1,46 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Code Block tests > Render code snapshot test 1`] = `
+<div>
+  <section
+    class="text-sm rounded-md overflow-hidden shadow-sm mt-2"
+  >
+    <div
+      class="flex px-1 py-1 items-center bg-gray-300/15"
+    >
+      <img
+        alt="ts-logo"
+        data-nimg="1"
+        decoding="async"
+        height="25"
+        loading="lazy"
+        src="/code-logos/typescript.svg"
+        style="color: transparent;"
+        width="25"
+      />
+      <p
+        class="pl-2 text-gray-500"
+      >
+        Typescript
+      </p>
+    </div>
+    <pre
+      style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 35, 35); color: rgb(230, 225, 220);"
+    >
+      <code
+        class="language-typescript"
+        style="white-space: pre;"
+      >
+        <span
+          style="color: rgb(194, 98, 48);"
+        >
+          const
+        </span>
+        <span>
+           test = test
+        </span>
+      </code>
+    </pre>
+  </section>
+</div>
+`;

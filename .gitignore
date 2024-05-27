@@ -1,0 +1,12 @@
+# Typescript distribution
+dist/**
+
+# Node modules
+node_modules/**
+
+# IDE folders
+.idea
+.vscode
+
+# Test coverage report
+coverage
