@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Table block tests > Should parse table block 1`] = `
+<div>
+  <table
+    class="w-full"
+  >
+    <tbody>
+      <tr>
+        <th
+          class="first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border"
+        >
+          test
+        </th>
+        <th
+          class="first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border"
+        >
+          test
+        </th>
+      </tr>
+    </tbody>
+  </table>
+</div>
+`;

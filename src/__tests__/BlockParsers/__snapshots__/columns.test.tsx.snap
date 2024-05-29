@@ -1,0 +1,292 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Column block tests > Should parse column block 1`] = `
+<div>
+  <section
+    class="grid gap-4 grid-cols-2"
+  >
+    <div
+      class="self-center"
+    >
+      <section
+        class="grid mt-2"
+      >
+        <img
+          alt=""
+          class="rounded justify-self-center dark:dark:opacity-75"
+          data-nimg="1"
+          decoding="async"
+          height="500"
+          loading="lazy"
+          src="/_next/image?url=http%3A%2F%2Ftest.test.png&w=1080&q=75"
+          srcset="/_next/image?url=http%3A%2F%2Ftest.test.png&w=640&q=75 1x, /_next/image?url=http%3A%2F%2Ftest.test.png&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="500"
+        />
+      </section>
+      <p
+        class="mt-1"
+      >
+        test
+      </p>
+      <figure
+        class="text-sm rounded-md overflow-hidden shadow-sm mt-2"
+      >
+        <pre
+          style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 35, 35); color: rgb(230, 225, 220);"
+        >
+          <code
+            style="white-space: pre;"
+          >
+            <span
+              style="color: rgb(109, 156, 190);"
+            >
+              test
+            </span>
+          </code>
+        </pre>
+      </figure>
+      <ol>
+        <li
+          class="list-decimal"
+        >
+          test
+        </li>
+        <li
+          class="list-decimal"
+        >
+          test2
+        </li>
+      </ol>
+      <p
+        class="text-left"
+      >
+        <span
+          class="italic text-lg"
+        >
+          "
+          test
+          "
+        </span>
+        <br />
+        <span
+          class="opacity-85 text-sm"
+        >
+          - 
+          test
+        </span>
+      </p>
+      <p
+        class="mt-1"
+      >
+        test
+      </p>
+      <section
+        class="grid gap-4 grid-cols-2"
+      >
+        <div
+          class="self-center"
+        >
+          <p
+            class="mt-1"
+          >
+            test
+          </p>
+        </div>
+        <div
+          class="self-center"
+        >
+          <p
+            class="mt-1"
+          >
+            test
+          </p>
+        </div>
+      </section>
+      <table
+        class="w-full"
+      >
+        <tbody>
+          <tr>
+            <th
+              class="first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border"
+            >
+              test
+            </th>
+            <th
+              class="first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border"
+            >
+              test
+            </th>
+          </tr>
+          <tr>
+            <td
+              class="first:border-l-0 last:border-r-0 pl-2 border-b border"
+            >
+              test
+            </td>
+            <td
+              class="first:border-l-0 last:border-r-0 pl-2 border-b border"
+            >
+              test
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <figure
+        class="p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg bg-gray-300 text-gray-600"
+      >
+        <figcaption
+          class="text-right"
+        >
+          test
+        </figcaption>
+      </figure>
+      <h1>
+        test
+      </h1>
+    </div>
+    <div
+      class="self-center"
+    >
+      <section
+        class="grid mt-2"
+      >
+        <img
+          alt=""
+          class="rounded justify-self-center dark:dark:opacity-75"
+          data-nimg="1"
+          decoding="async"
+          height="500"
+          loading="lazy"
+          src="/_next/image?url=http%3A%2F%2Ftest.test.png&w=1080&q=75"
+          srcset="/_next/image?url=http%3A%2F%2Ftest.test.png&w=640&q=75 1x, /_next/image?url=http%3A%2F%2Ftest.test.png&w=1080&q=75 2x"
+          style="color: transparent;"
+          width="500"
+        />
+      </section>
+      <p
+        class="mt-1"
+      >
+        test
+      </p>
+      <figure
+        class="text-sm rounded-md overflow-hidden shadow-sm mt-2"
+      >
+        <pre
+          style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 35, 35); color: rgb(230, 225, 220);"
+        >
+          <code
+            style="white-space: pre;"
+          >
+            <span
+              style="color: rgb(109, 156, 190);"
+            >
+              test
+            </span>
+          </code>
+        </pre>
+      </figure>
+      <ol>
+        <li
+          class="list-decimal"
+        >
+          test
+        </li>
+        <li
+          class="list-decimal"
+        >
+          test2
+        </li>
+      </ol>
+      <p
+        class="text-left"
+      >
+        <span
+          class="italic text-lg"
+        >
+          "
+          test
+          "
+        </span>
+        <br />
+        <span
+          class="opacity-85 text-sm"
+        >
+          - 
+          test
+        </span>
+      </p>
+      <p
+        class="mt-1"
+      >
+        test
+      </p>
+      <section
+        class="grid gap-4 grid-cols-2"
+      >
+        <div
+          class="self-center"
+        >
+          <p
+            class="mt-1"
+          >
+            test
+          </p>
+        </div>
+        <div
+          class="self-center"
+        >
+          <p
+            class="mt-1"
+          >
+            test
+          </p>
+        </div>
+      </section>
+      <table
+        class="w-full"
+      >
+        <tbody>
+          <tr>
+            <th
+              class="first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border"
+            >
+              test
+            </th>
+            <th
+              class="first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border"
+            >
+              test
+            </th>
+          </tr>
+          <tr>
+            <td
+              class="first:border-l-0 last:border-r-0 pl-2 border-b border"
+            >
+              test
+            </td>
+            <td
+              class="first:border-l-0 last:border-r-0 pl-2 border-b border"
+            >
+              test
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <figure
+        class="p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg bg-gray-300 text-gray-600"
+      >
+        <figcaption
+          class="text-right"
+        >
+          test
+        </figcaption>
+      </figure>
+      <h1>
+        test
+      </h1>
+    </div>
+  </section>
+</div>
+`;

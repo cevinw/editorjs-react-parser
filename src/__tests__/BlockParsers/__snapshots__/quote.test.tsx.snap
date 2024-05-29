@@ -1,0 +1,24 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Error block tests > Should not parse unhandled block 1`] = `
+<div>
+  <p
+    class="text-left"
+  >
+    <span
+      class="italic text-lg"
+    >
+      "
+      test
+      "
+    </span>
+    <br />
+    <span
+      class="opacity-85 text-sm"
+    >
+      - 
+      By Albert
+    </span>
+  </p>
+</div>
+`;

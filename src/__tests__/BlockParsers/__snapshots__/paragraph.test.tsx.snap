@@ -1,0 +1,11 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Paragraph block tests > Should parse paragraph block 1`] = `
+<div>
+  <p
+    class="mt-1"
+  >
+    test
+  </p>
+</div>
+`;

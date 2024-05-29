@@ -1,0 +1,12 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Error block tests > Should not parse unhandled block 1`] = `
+<div>
+  <div
+    class="mt-2 p-2 bg-red-300 text-red-900"
+  >
+    ERROR: Can't parse item of type=
+    list
+  </div>
+</div>
+`;
