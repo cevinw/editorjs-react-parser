@@ -1,4 +1,3 @@
-
 import React from "react";
 import {OutputBlockData} from "../BlockRenderer";
 
@@ -7,20 +6,41 @@ import {OutputBlockData} from "../BlockRenderer";
  */
 
 export type EditorJsList = {
-    style: string,
+    style: ListStyle,
     items: string[]
+}
+
+export enum ListStyle {
+    ordered = "ordered",
+    unordered = "unordered",
+}
+
+export type ListConfig = {
+    classNames: {
+        unordered?: string,
+        ordered?: string
+    }
+}
+
+const defaultConfig: ListConfig = {
+    classNames: {
+        unordered: "list-disc",
+        ordered: "list-decimal",
+    }
 }
 
 export interface ListProps {
     item: OutputBlockData<EditorJsList>,
-    className?: string
+    config?: ListConfig
 }
 
-const ListBlock = ({item, className}: ListProps) : React.JSX.Element  => {
-    let listElements: React.JSX.Element[] = item.data.items.map((text: string, index: number) =>
-        <li className={className ? className : item.data.style == "unordered" ? "list-disc" : "list-decimal"}
+const ListBlock = ({item, config}: ListProps): React.JSX.Element => {
+    const currentClasses = Object.assign({}, defaultConfig, config).classNames
+    const listElements: React.JSX.Element[] = item.data.items.map((text: string, index: number) =>
+        <li className={
+            item.data.style == ListStyle.unordered ? currentClasses.unordered : currentClasses.ordered}
             key={index + text}>{text}</li>)
-    if (item.data.style === "ordered") {
+    if (item.data.style === ListStyle.ordered) {
         return <ol key={item.id}>{listElements}</ol>
     } else {
         return <ul key={item.id}>{listElements}</ul>

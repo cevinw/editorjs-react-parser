@@ -23,7 +23,7 @@ exports[`BlockRenderer tests > Block renderer snapshot test 1`] = `
   >
     test
   </p>
-  <section
+  <figure
     class="text-sm rounded-md overflow-hidden shadow-sm mt-2"
   >
     <pre
@@ -39,7 +39,7 @@ exports[`BlockRenderer tests > Block renderer snapshot test 1`] = `
         </span>
       </code>
     </pre>
-  </section>
+  </figure>
   <ol>
     <li
       class="list-decimal"
@@ -53,7 +53,7 @@ exports[`BlockRenderer tests > Block renderer snapshot test 1`] = `
     </li>
   </ol>
   <p
-    class="text-start"
+    class="text-left"
   >
     <span
       class="italic text-lg"
@@ -127,15 +127,15 @@ exports[`BlockRenderer tests > Block renderer snapshot test 1`] = `
       </tr>
     </tbody>
   </table>
-  <section
+  <figure
     class="p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg bg-gray-300 text-gray-600"
   >
-    <div
+    <figcaption
       class="text-right"
     >
       test
-    </div>
-  </section>
+    </figcaption>
+  </figure>
   <h1>
     test
   </h1>

@@ -7,9 +7,12 @@ import {OutputBlockData} from "../BlockRenderer";
 /**
  * Output of the code block
  *
- * Default output just includes the "code"
+ * Default output just includes the "code" field
+ *
  * "mode" is included if you're using @rxpm/editor-js-code
- * "language" is included if you're using @bomdi/codebox or codeflask
+ * "language" is included if you're using @bomdi/codebox or @calumk/editorjs-codeflask (note that "theme" is omitted)
+ *
+ * This parser should support most editorJS code block tools
  */
 
 export type EditorJsCode = {
@@ -26,37 +29,67 @@ export type CodeLanguage = {
     displayText: string,
 }
 
-export interface CodeProps {
-    item: OutputBlockData<EditorJsCode>,
-    className?: string
+
+/**
+ * Changes the default configured values for a code block
+ *
+ * Code styles can be found under react-syntax-highlighter, these objects can be passed directly to "codeStyle"
+ *
+ * Only fields set will be overridden
+ */
+export type CodeConfig = {
+    classNames?: {
+        container?: string,
+        languageInfoBar?: string,
+        languageInfoBarText?: string,
+    }
     codeStyle?: { [key: string]: React.CSSProperties }
-    languages? : CodeLanguage[]
-    showLineNumbers?: boolean
+    languages?: CodeLanguage[],
+    showLineNumbers?: boolean,
+
 }
 
-const CodeBlock = ({item, className, codeStyle, languages, showLineNumbers}: CodeProps) : React.JSX.Element  => {
-    let language = languages?.find(
+const defaultConfig: CodeConfig = {
+    classNames: {
+        container: "text-sm rounded-md overflow-hidden shadow-sm mt-2",
+        languageInfoBar: "flex px-1 py-1 items-center bg-gray-300/15",
+        languageInfoBarText: "pl-2 text-gray-500"
+    },
+    codeStyle: railcasts,
+    languages: [],
+    showLineNumbers: false,
+}
+
+export interface CodeProps {
+    item: OutputBlockData<EditorJsCode>,
+    config?: CodeConfig,
+}
+
+const CodeBlock = ({item, config}: CodeProps): React.JSX.Element => {
+    const currentConfig: CodeConfig = Object.assign({}, defaultConfig, config)
+    const language: CodeLanguage | undefined = currentConfig.languages?.find(
         it =>
             it.shortName === item.data.mode ||
             it.language === item.data.language ||
             it.shortName === item.data.language)
 
-    return <section key={item.id}
-                    className={className ? className : "text-sm rounded-md overflow-hidden shadow-sm mt-2"}>
+    return <figure key={item.id}
+                   className={currentConfig.classNames?.container}>
         {language &&
-            <div className={"flex px-1 py-1 items-center bg-gray-300/15"}>
+            <div className={currentConfig.classNames?.languageInfoBar}>
                 <Image src={language.logoSrc} width={25} height={25} alt={language.logoAlt}/>
-                <p className={"pl-2 text-gray-500"}>{language.displayText}</p>
+                <figcaption
+                    className={currentConfig.classNames?.languageInfoBarText}>{language.displayText}</figcaption>
             </div>
         }
 
         <SyntaxHighlighter
             language={language ? language.language : ""}
-            style={codeStyle ? codeStyle : railcasts}
-            showLineNumbers={showLineNumbers ? showLineNumbers : false}>
+            style={currentConfig.codeStyle}
+            showLineNumbers={currentConfig.showLineNumbers}>
             {item.data.code}
         </SyntaxHighlighter>
-    </section>;
+    </figure>;
 };
 
 export default CodeBlock;

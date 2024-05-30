@@ -16,17 +16,41 @@ export type EditorJsImage = {
     withBackground: boolean
 }
 
-export interface ImageProps {
-    item: OutputBlockData<EditorJsImage>,
-    className?: string
+export type ImageConfig = {
+    classNames?: {
+        container?: string,
+        image?: string,
+    },
+    dimensions?: {
+        width?: number,
+        height?: number,
+    },
 }
 
-const ImageBlock = ({item, className}: ImageProps) : React.JSX.Element  => {
-    return <section className={"grid mt-2"}>
-        <Image className={className ? className : "rounded justify-self-center dark:dark:opacity-75"}
+const defaultConfig : ImageConfig = {
+    classNames: {
+        image: "rounded justify-self-center dark:dark:opacity-75",
+        container: "grid mt-2"
+    },
+    dimensions: {
+        width: 500,
+        height: 500
+    }
+}
+
+export interface ImageProps {
+    item: OutputBlockData<EditorJsImage>,
+    config?: ImageConfig
+}
+
+const ImageBlock = ({item, config}: ImageProps) : React.JSX.Element  => {
+    const currentConfig = Object.assign({}, defaultConfig, config)
+    return <section className={currentConfig.classNames?.container}>
+        <Image className={currentConfig.classNames?.image}
                alt={item.data.caption}
-               width={500}
-               height={500} src={item.data.file.url}/>
+               width={currentConfig.dimensions?.width}
+               height={currentConfig.dimensions?.height}
+               src={item.data.file.url}/>
     </section>
 };
 

@@ -1,15 +1,15 @@
 import React from 'react';
-import AlertBlock from "./BlockParsers/alert";
-import ParagraphBlock from "./BlockParsers/paragraph";
-import CodeBlock, {CodeLanguage} from "./BlockParsers/code";
-import DelimiterBlock from "./BlockParsers/delimiter";
+import AlertBlock, {AlertConfig} from "./BlockParsers/alert";
+import ParagraphBlock, {ParagraphConfig} from "./BlockParsers/paragraph";
+import CodeBlock, {CodeConfig} from "./BlockParsers/code";
+import DelimiterBlock, {DelimiterConfig} from "./BlockParsers/delimiter";
 import HeaderBlock from "./BlockParsers/header";
-import ImageBlock from "./BlockParsers/image";
-import ColumnsBlock from "./BlockParsers/columns";
-import QuoteBlock from "./BlockParsers/quote";
-import TableBlock from "./BlockParsers/table";
-import ListBlock from "./BlockParsers/list";
-import ErrorBlock from "./BlockParsers/error";
+import ImageBlock, {ImageConfig} from "./BlockParsers/image";
+import ColumnsBlock, {ColumnsConfig} from "./BlockParsers/columns";
+import QuoteBlock, {QuoteConfig} from "./BlockParsers/quote";
+import TableBlock, {TableConfig} from "./BlockParsers/table";
+import ListBlock, {ListConfig} from "./BlockParsers/list";
+import ErrorBlock, {ErrorConfig} from "./BlockParsers/error";
 
 
 export interface ArticleRenderProps {
@@ -18,20 +18,16 @@ export interface ArticleRenderProps {
 }
 
 export interface BlockRendererConfig {
-    alert?: { className: string },
-    code?: {
-        className?: string,
-        codeStyle?: { [key: string]: React.CSSProperties }
-        languages?: CodeLanguage[],
-        showLineNumbers?: boolean,
-    },
-    table?: { className: string },
-    image?: { className: string },
-    header?: { className: string },
-    paragraph?: { className: string },
-    list?: { className: string },
-    quote?: { className: string },
-    delimiter?: { className: string }
+    alert?: AlertConfig,
+    code?: CodeConfig,
+    columns?: ColumnsConfig,
+    table?: TableConfig,
+    image?: ImageConfig,
+    paragraph?: ParagraphConfig,
+    list?: ListConfig,
+    quote?: QuoteConfig,
+    delimiter?: DelimiterConfig,
+    error?: ErrorConfig,
 }
 
 export interface OutputBlockData<Data extends object = any> {
@@ -58,17 +54,17 @@ const BlockRenderer = ({data, config}: ArticleRenderProps) =>
 
 const parseData = (item: OutputBlockData, config?: BlockRendererConfig): React.JSX.Element => {
     return {
-        "code": <CodeBlock key={item.id} item={item} {...config?.code}/>,
-        "paragraph": <ParagraphBlock key={item.id} item={item} {...config?.paragraph}/>,
-        "header": <HeaderBlock key={item.id} item={item} {...config?.header}/>,
-        "alert": <AlertBlock key={item.id} item={item} {...config?.alert}/>,
-        "columns": <ColumnsBlock key={item.id} item={item} config={config}/>,
-        "quote": <QuoteBlock key={item.id} item={item} {...config?.quote}/>,
-        "table": <TableBlock key={item.id} item={item} {...config?.table}/>,
-        "list": <ListBlock key={item.id} item={item} {...config?.list}/>,
-        "delimiter": <DelimiterBlock key={item.id} item={item} {...config?.delimiter}/>,
-        "image": <ImageBlock key={item.id} item={item} {...config?.image}/>
-    }[item.type] || <ErrorBlock item={item} key={item.id}/>
+        "header": <HeaderBlock key={item.id} item={item}/>,
+        "code": <CodeBlock key={item.id} item={item} config={config?.code}/>,
+        "list": <ListBlock key={item.id} item={item} config={config?.list}/>,
+        "alert": <AlertBlock key={item.id} item={item} config={config?.alert}/>,
+        "quote": <QuoteBlock key={item.id} item={item} config={config?.quote}/>,
+        "table": <TableBlock key={item.id} item={item} config={config?.table}/>,
+        "image": <ImageBlock key={item.id} item={item} config={config?.image}/>,
+        "delimiter": <DelimiterBlock key={item.id} item={item} config={config?.delimiter}/>,
+        "paragraph": <ParagraphBlock key={item.id} item={item} config={config?.paragraph}/>,
+        "columns": <ColumnsBlock key={item.id} item={item} config={config?.columns} blockRendererConfig={config}/>
+    }[item.type] || <ErrorBlock key={item.id} item={item} config={config?.error}/>
 }
 
 export default BlockRenderer;

@@ -5,12 +5,22 @@ import {OutputBlockData} from "../BlockRenderer";
  * Error response
  */
 
-interface ErrorProps {
-    item: OutputBlockData
+export type ErrorConfig = {
+    className?: string;
 }
 
-const ErrorBlock = ({item}: ErrorProps) : React.JSX.Element => {
-    return <div key={item.id} className={"mt-2 p-2 bg-red-300 text-red-900"}>ERROR: Can&apos;t parse item of
+interface ErrorProps {
+    item: OutputBlockData,
+    config?: ErrorConfig
+}
+
+const defaultConfig: ErrorConfig = {
+    className: "mt-2 p-2 bg-red-300 text-red-900",
+}
+
+const ErrorBlock = ({item, config}: ErrorProps) : React.JSX.Element => {
+    const currentConfig : ErrorConfig = Object.assign({}, defaultConfig, config);
+    return <div key={item.id} className={currentConfig.className}>ERROR: Can&apos;t parse item of
         type={item.type}</div>;
 };
 

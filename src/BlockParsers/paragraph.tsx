@@ -11,13 +11,22 @@ export type EditorJsParagraph = {
     text: string
 }
 
-export interface props {
-    item: OutputBlockData<EditorJsParagraph>,
+export type ParagraphConfig = {
     className?: string
 }
 
-const ParagraphBlock = ({item, className}: props) : React.JSX.Element  => {
-    return <p className={className ? className : "mt-1"} key={item.id}>{parse(item.data.text)}</p>;
+const defaultConfig : ParagraphConfig = {
+    className: "mt-1"
+}
+
+export interface props {
+    item: OutputBlockData<EditorJsParagraph>,
+    config?: ParagraphConfig
+}
+
+const ParagraphBlock = ({item, config}: props) : React.JSX.Element  => {
+    const currentConfig = Object.assign({}, defaultConfig, config)
+    return <p className={currentConfig.className} key={item.id}>{parse(item.data.text)}</p>;
 };
 
 export default ParagraphBlock;

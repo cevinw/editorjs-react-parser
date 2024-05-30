@@ -16,7 +16,10 @@
     "dist/",
     "node_modules/",
     "examples/",
-    "src/**/*.test.*"
+    "coverage",
+    "src/**/*.test.*",
+    "src/__tests__/**",
+    "vitest.config.ts"
   ],
 
 }

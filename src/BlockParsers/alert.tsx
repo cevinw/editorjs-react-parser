@@ -7,31 +7,87 @@ import {OutputBlockData} from "../BlockRenderer";
  */
 
 export type EditorJsAlert = {
-    type: string,
-    align: string
+    type: AlertType,
+    align: AlertAlignment
     message: string
+}
+
+export enum AlertAlignment {
+    left = "left",
+    right = "right",
+    center = "center",
+}
+
+export enum AlertType {
+    info = "info",
+    success = "success",
+    danger = "danger",
+    light = "light",
+    dark = "dark",
+    warning = "warning",
+    primary = "primary"
+}
+
+export type AlertConfig = {
+    classNames?: {
+        baseElement?: string
+        info?: string,
+        success?: string,
+        danger?: string,
+        light?: string,
+        dark?: string,
+        warning?: string,
+        primary?: string,
+        textCenter?: string,
+        textRight?: string,
+        textLeft?: string,
+    }
+}
+
+const defaultConfig: AlertConfig = {
+    classNames: {
+        baseElement: "p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg",
+        info: "bg-gray-300 text-gray-600",
+        success: "bg-green-100 text-green-800",
+        danger: "bg-red-200 text-red-800",
+        light: "bg-white text-gray-600",
+        dark: "bg-gray-900 text-gray-300 bg-opacity-85",
+        warning: "bg-orange-100 text-orange-800",
+        primary: "bg-gray-300 text-gray-600",
+        textCenter: "text-center",
+        textRight: "text-right",
+        textLeft: "",
+    }
 }
 
 export interface AlertProps {
     item: OutputBlockData<EditorJsAlert>,
-    className?: string
+    config?: AlertConfig
 }
 
-const AlertBlock = ({item, className}: AlertProps) : React.JSX.Element => {
+const AlertBlock = ({item, config}: AlertProps): React.JSX.Element => {
+    // Assign all defined config values to default config
+    const currentConfig: AlertConfig = Object.assign({}, defaultConfig, config)
+    const classNames = currentConfig.classNames;
     return (
-        <section key={item.id} className={className ? className : "p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg " + {
-            "info": "bg-gray-300 text-gray-600",
-            "success": "bg-green-100 text-green-800",
-            "danger": "bg-red-200 text-red-800",
-            "light": "bg-white text-gray-600",
-            "dark": "bg-gray-900 text-gray-300 bg-opacity-85",
-            "warning": "bg-orange-100 text-orange-800",
-            "primary": "bg-gray-300 text-gray-600"
-        }[item.data.type]}>
-            <div className={{"center": "text-center", "right": "text-right"}[item.data.align]}>
+        <figure key={item.id}
+                className={classNames?.baseElement + " " + {
+                    [AlertType.info]: classNames?.info,
+                    [AlertType.success]: classNames?.success,
+                    [AlertType.danger]: classNames?.danger,
+                    [AlertType.light]: classNames?.light,
+                    [AlertType.dark]: classNames?.dark,
+                    [AlertType.warning]: classNames?.warning,
+                    [AlertType.primary]: classNames?.primary,
+                }[item.data.type]}>
+            <figcaption className={{
+                [AlertAlignment.center]: classNames?.textCenter,
+                [AlertAlignment.right]: classNames?.textRight,
+                [AlertAlignment.left]: classNames?.textLeft
+            }[item.data.align]}>
                 {parse(item.data.message)}
-            </div>
-        </section>
+            </figcaption>
+        </figure>
     );
 };
 

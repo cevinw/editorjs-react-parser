@@ -1,16 +1,17 @@
 import {describe, expect, test} from "vitest";
 import {render} from "@testing-library/react";
 import React from "react";
-import AlertBlock, {EditorJsAlert} from "../../BlockParsers/alert";
+import AlertBlock, {AlertAlignment, AlertType, EditorJsAlert} from "../../BlockParsers/alert";
 import {OutputBlockData} from "../../BlockRenderer";
 
 describe("Alert Block tests", () => {
     test("Render alert snapshot test", async () => {
 
-        const alertBlockData : OutputBlockData<EditorJsAlert> = {
+
+        const alertBlockData: OutputBlockData<EditorJsAlert> = {
             data: {
-                type: "success",
-                align: "center",
+                type: AlertType.success,
+                align: AlertAlignment.center,
                 message: "test"
             },
             type: "alert",
@@ -23,19 +24,19 @@ describe("Alert Block tests", () => {
     })
 
     test.each([
-        ["success", "bg-green-100"],
-        ["danger", "bg-red-200"],
-        ["warning", "bg-orange-100"],
-        ["light", "bg-white"],
-        ["dark", "bg-gray-900"],
-        ["primary", "bg-gray-300"],
-        ["info", "bg-gray-300"]
+        [AlertType.success, "bg-green-100"],
+        [AlertType.danger, "bg-red-200"],
+        [AlertType.warning, "bg-orange-100"],
+        [AlertType.light, "bg-white"],
+        [AlertType.dark, "bg-gray-900"],
+        [AlertType.primary, "bg-gray-300"],
+        [AlertType.info, "bg-gray-300"]
 
-    ])("Render alert type test", async (type: string, expected: string) => {
-        const alertBlockData : OutputBlockData<EditorJsAlert> = {
+    ])("Render alert type test", async (type, expected: string) => {
+        const alertBlockData: OutputBlockData<EditorJsAlert> = {
             data: {
                 type: type,
-                align: "center",
+                align: AlertAlignment.right,
                 message: "test"
             },
             type: "alert",
@@ -43,7 +44,7 @@ describe("Alert Block tests", () => {
 
         }
         const {container} = render(<AlertBlock item={alertBlockData}/>);
-        expect(container.querySelector("section")?.className).contains(expected);
+        expect(container.querySelector("figure")?.className).contains(expected);
 
     })
 })

@@ -1,4 +1,4 @@
-import React, {FC} from 'react';
+import React from 'react';
 import parse from "html-react-parser";
 import {OutputBlockData} from "../BlockRenderer";
 
@@ -14,20 +14,15 @@ export type EditorJsHeader = {
 
 export interface HeaderProps {
     item: OutputBlockData<EditorJsHeader>,
-    className?: string
 }
 
-const HeaderBlock = ({item, className}: HeaderProps) : React.JSX.Element  => {
-    switch (item.data.level) {
-        case 2:
-            return <h1 className={className} key={item.id}>{parse(item.data.text)}</h1>
-        case 3:
-            return <h2 className={className} key={item.id}>{parse(item.data.text)}</h2>
-        case 4:
-            return <h3 className={className} key={item.id}>{parse(item.data.text)}</h3>
-        default:
-            return <h1 className={className} key={item.id}>{parse(item.data.text)}</h1>
-    }
+const HeaderBlock = ({item}: HeaderProps): React.JSX.Element => {
+
+    return {
+        2: <h1 key={item.id}>{parse(item.data.text)}</h1>,
+        3: <h2 key={item.id}>{parse(item.data.text)}</h2>,
+        4: <h3 key={item.id}>{parse(item.data.text)}</h3>,
+    }[item.data.level] || <h1 key={item.id}>{parse(item.data.text)}</h1>
 };
 
 export default HeaderBlock;

@@ -2,7 +2,7 @@
 
 exports[`Code Block tests > Render code snapshot test 1`] = `
 <div>
-  <section
+  <figure
     class="text-sm rounded-md overflow-hidden shadow-sm mt-2"
   >
     <div
@@ -18,11 +18,11 @@ exports[`Code Block tests > Render code snapshot test 1`] = `
         style="color: transparent;"
         width="25"
       />
-      <p
+      <figcaption
         class="pl-2 text-gray-500"
       >
         Typescript
-      </p>
+      </figcaption>
     </div>
     <pre
       style="display: block; overflow-x: auto; padding: 0.5em; background: rgb(35, 35, 35); color: rgb(230, 225, 220);"
@@ -41,6 +41,6 @@ exports[`Code Block tests > Render code snapshot test 1`] = `
         </span>
       </code>
     </pre>
-  </section>
+  </figure>
 </div>
 `;
