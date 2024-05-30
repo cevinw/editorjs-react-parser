@@ -1,7 +1,5 @@
 import React from 'react';
 import {OutputBlockData} from "../BlockRenderer";
-import {s} from "vitest/dist/reporters-yx5ZTtEV";
-import {ListConfig} from "./list";
 
 /**
  * Output of a table block
