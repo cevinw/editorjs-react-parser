@@ -50,7 +50,8 @@ const ImageBlock = ({item, config}: ImageProps) : React.JSX.Element  => {
                alt={item.data.caption}
                width={currentConfig.dimensions?.width}
                height={currentConfig.dimensions?.height}
-               src={item.data.file.url}/>
+               src={item.data.file.url}
+        priority={true}/>
     </section>
 };
 
