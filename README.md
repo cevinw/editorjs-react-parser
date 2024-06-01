@@ -24,7 +24,7 @@ This whole component can function as both a server component or client component
 
 >**Installation** ♥
 > ```
-> npm i editorjs-react-parser
+> npm i editor-react-parser
 >```
 
 > [!TIP]
