@@ -2,7 +2,7 @@ import {describe, expect, test} from "vitest";
 import {render} from "@testing-library/react";
 import React from "react";
 import AlertBlock, {AlertAlignment, AlertType, EditorJsAlert} from "../../BlockParsers/alert";
-import {OutputBlockData} from "../../BlockRenderer";
+import {OutputBlockData} from "../../BlockParser";
 
 describe("Alert Block tests", () => {
     test("Render alert snapshot test", async () => {

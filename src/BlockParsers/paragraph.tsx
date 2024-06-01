@@ -1,7 +1,7 @@
 
 import React from 'react';
 import parse from "html-react-parser";
-import {OutputBlockData} from "../BlockRenderer";
+import {OutputBlockData} from "../BlockParser";
 
 /**
  * Output of a paragraph block

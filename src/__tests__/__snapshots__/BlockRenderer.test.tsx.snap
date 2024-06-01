@@ -1,6 +1,6 @@
 // Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`BlockRenderer tests > Block renderer snapshot test 1`] = `
+exports[`BlockParser tests > Block renderer snapshot test 1`] = `
 <div>
   <section
     class="grid mt-2"

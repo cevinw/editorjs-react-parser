@@ -12,12 +12,12 @@ import ListBlock, {ListConfig} from "./BlockParsers/list";
 import ErrorBlock, {ErrorConfig} from "./BlockParsers/error";
 
 
-export interface ArticleRenderProps {
+export interface BlockParserProps {
     data: OutputData;
-    config?: BlockRendererConfig
+    config?: BlockParserConfig
 }
 
-export interface BlockRendererConfig {
+export interface BlockParserConfig {
     alert?: AlertConfig,
     code?: CodeConfig,
     columns?: ColumnsConfig,
@@ -49,10 +49,10 @@ export type BlockId = string;
 export type BlockToolData<T extends object = any> = T;
 export type BlockTuneData = any;
 
-export const BlockRenderer = ({data, config}: ArticleRenderProps) =>
+export const BlockParser = ({data, config}: BlockParserProps) =>
     data.blocks.map((blockData: OutputBlockData) => parseData(blockData, config));
 
-const parseData = (item: OutputBlockData, config?: BlockRendererConfig): React.JSX.Element => {
+const parseData = (item: OutputBlockData, config?: BlockParserConfig): React.JSX.Element => {
     return {
         "header": <HeaderBlock key={item.id} item={item}/>,
         "code": <CodeBlock key={item.id} item={item} config={config?.code}/>,
@@ -67,4 +67,4 @@ const parseData = (item: OutputBlockData, config?: BlockRendererConfig): React.J
     }[item.type] || <ErrorBlock key={item.id} item={item} config={config?.error}/>
 }
 
-export default BlockRenderer;
+export default BlockParser;

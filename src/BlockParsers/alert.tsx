@@ -1,6 +1,6 @@
 import parse from "html-react-parser";
 import React from "react";
-import {OutputBlockData} from "../BlockRenderer";
+import {OutputBlockData} from "../BlockParser";
 
 /**
  * Output of the alert block type

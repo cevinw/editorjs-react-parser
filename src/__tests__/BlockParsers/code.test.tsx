@@ -1,5 +1,5 @@
 import {describe, expect, test} from "vitest";
-import {OutputBlockData} from "../../BlockRenderer";
+import {OutputBlockData} from "../../BlockParser";
 import {render} from "@testing-library/react";
 import React from "react";
 import CodeBlock, {EditorJsCode} from "../../BlockParsers/code";

@@ -1,6 +1,6 @@
 import {describe, expect} from "vitest";
 import test from "../conftest";
-import {OutputBlockData} from "../../BlockRenderer";
+import {OutputBlockData} from "../../BlockParser";
 import {render} from "@testing-library/react";
 import Error from "../../BlockParsers/error";
 import React from "react";

@@ -2,8 +2,8 @@
   "name": "editorjs-react-parser",
   "version": "1.0.2",
   "description": "A renderer for editorjs block data for react",
-  "main": "dist/BlockRenderer.js",
-  "types": "dist/BlockRenderer.d.ts",
+  "main": "dist/BlockParser.js",
+  "types": "dist/BlockParser.d.ts",
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",

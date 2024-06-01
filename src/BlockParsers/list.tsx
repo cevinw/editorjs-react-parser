@@ -1,5 +1,5 @@
 import React from "react";
-import {OutputBlockData} from "../BlockRenderer";
+import {OutputBlockData} from "../BlockParser";
 
 /**
  * Output of a list block

@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from "next/image";
-import {OutputBlockData} from "../BlockRenderer";
+import {OutputBlockData} from "../BlockParser";
 
 /**
  * Output of a image block

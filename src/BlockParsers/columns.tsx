@@ -1,9 +1,9 @@
 import React from 'react';
-import BlockRenderer, {BlockRendererConfig, OutputBlockData, OutputData} from "../BlockRenderer";
+import BlockParser, {BlockParserConfig, OutputBlockData, OutputData} from "../BlockParser";
 
 /**
  * Output of the columns block
- * A column contains the same data structure of editorJs data and will call the BlockRenderer recursively
+ * A column contains the same data structure of editorJs data and will call the BlockParser recursively
  *
  * This parser provides support for the @calumk/editorjs-columns block tool
  */
@@ -33,7 +33,7 @@ const defaultColumnsConfig: ColumnsConfig = {
 export interface ColumnsProps {
     item: OutputBlockData<EditorJsColumns>,
     config?: ColumnsConfig,
-    blockRendererConfig?: BlockRendererConfig,
+    blockRendererConfig?: BlockParserConfig,
 }
 
 
@@ -43,7 +43,7 @@ const ColumnsBlock = ({item, config, blockRendererConfig}: ColumnsProps): React.
     const cols = item.data.cols.length;
     const innerBlocks = item.data.cols.map((col: OutputData, index: number) =>
         <div key={col.time + index.toString()} className={currentConfig.classNames?.innerBlocksContainers}>
-            <BlockRenderer data={col} config={blockRendererConfig}/>
+            <BlockParser data={col} config={blockRendererConfig}/>
         </div>
     )
 

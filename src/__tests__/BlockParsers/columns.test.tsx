@@ -2,7 +2,7 @@ import {describe, expect} from "vitest";
 import {render} from "@testing-library/react";
 import React from "react";
 import ColumnsBlock, {EditorJsColumns} from "../../BlockParsers/columns";
-import {OutputBlockData} from "../../BlockRenderer";
+import {OutputBlockData} from "../../BlockParser";
 import test from "../conftest"
 
 describe("Column block tests", () => {
