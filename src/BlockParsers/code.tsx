@@ -77,7 +77,7 @@ const CodeBlock = ({item, config}: CodeProps): React.JSX.Element => {
                    className={currentConfig.classNames?.container}>
         {language &&
             <div className={currentConfig.classNames?.languageInfoBar}>
-                <Image src={language.logoSrc} width={25} height={25} alt={language.logoAlt} priority={true}/>
+                <img src={language.logoSrc} width={25} height={25} alt={language.logoAlt}/>
                 <figcaption
                     className={currentConfig.classNames?.languageInfoBarText}>{language.displayText}</figcaption>
             </div>

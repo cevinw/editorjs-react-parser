@@ -46,12 +46,12 @@ export interface ImageProps {
 const ImageBlock = ({item, config}: ImageProps) : React.JSX.Element  => {
     const currentConfig = Object.assign({}, defaultImageConfig, config)
     return <section className={currentConfig.classNames?.container}>
-        <Image className={currentConfig.classNames?.image}
+        <img className={currentConfig.classNames?.image}
                alt={item.data.caption}
                width={currentConfig.dimensions?.width}
                height={currentConfig.dimensions?.height}
                src={item.data.file.url}
-        priority={true}/>
+        />
     </section>
 };
 

@@ -1,7 +1,7 @@
 {
-  "name": "editorjs-next-renderer",
+  "name": "editorjs-react-parser",
   "version": "1.0.2",
-  "description": "A renderer for editorjs block data for next",
+  "description": "A renderer for editorjs block data for react",
   "main": "dist/BlockRenderer.js",
   "types": "dist/BlockRenderer.d.ts",
   "scripts": {
@@ -15,6 +15,9 @@
   },
   "keywords": [
     "NextJs",
+    "next",
+    "editorjs-react",
+    "editorjs-react-parser",
     "editorjs",
     "parser",
     "renderer",

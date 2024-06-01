@@ -10,12 +10,8 @@ exports[`Code Block tests > Render code snapshot test 1`] = `
     >
       <img
         alt="ts-logo"
-        data-nimg="1"
-        decoding="async"
-        fetchpriority="high"
         height="25"
         src="/code-logos/typescript.svg"
-        style="color: transparent;"
         width="25"
       />
       <figcaption

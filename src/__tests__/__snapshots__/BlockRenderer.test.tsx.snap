@@ -8,13 +8,8 @@ exports[`BlockRenderer tests > Block renderer snapshot test 1`] = `
     <img
       alt=""
       class="rounded justify-self-center dark:dark:opacity-75"
-      data-nimg="1"
-      decoding="async"
-      fetchpriority="high"
       height="500"
-      src="/_next/image?url=http%3A%2F%2Ftest.test.png&w=1080&q=75"
-      srcset="/_next/image?url=http%3A%2F%2Ftest.test.png&w=640&q=75 1x, /_next/image?url=http%3A%2F%2Ftest.test.png&w=1080&q=75 2x"
-      style="color: transparent;"
+      src="http://test.test.png"
       width="500"
     />
   </section>
