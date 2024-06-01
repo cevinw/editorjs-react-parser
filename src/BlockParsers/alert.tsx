@@ -44,7 +44,7 @@ export type AlertConfig = {
     }
 }
 
-const defaultConfig: AlertConfig = {
+const defaultAlertConfig: AlertConfig = {
     classNames: {
         baseElement: "p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg",
         info: "bg-gray-300 text-gray-600",
@@ -67,7 +67,7 @@ export interface AlertProps {
 
 const AlertBlock = ({item, config}: AlertProps): React.JSX.Element => {
     // Assign all defined config values to default config
-    const currentConfig: AlertConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig: AlertConfig = Object.assign({}, defaultAlertConfig, config)
     const classNames = currentConfig.classNames;
     return (
         <figure key={item.id}

@@ -15,7 +15,7 @@ export type ParagraphConfig = {
     className?: string
 }
 
-const defaultConfig : ParagraphConfig = {
+const defaultParagraphConfig : ParagraphConfig = {
     className: "mt-1"
 }
 
@@ -25,7 +25,7 @@ export interface props {
 }
 
 const ParagraphBlock = ({item, config}: props) : React.JSX.Element  => {
-    const currentConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig = Object.assign({}, defaultParagraphConfig, config)
     return <p className={currentConfig.className} key={item.id}>{parse(item.data.text)}</p>;
 };
 

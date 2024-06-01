@@ -18,7 +18,7 @@ export type TableConfig = {
     }
 }
 
-const defaultConfig: TableConfig = {
+const defaultTableConfig: TableConfig = {
     classNames: {
         tableHeader: "first:border-l-0 text-left pl-2 last:border-r-0 border-b-2 border",
         tableData: "first:border-l-0 last:border-r-0 pl-2 border-b border",
@@ -32,7 +32,7 @@ export interface TableProps {
 }
 
 const TableBlock = ({item, config}: TableProps) : React.JSX.Element  => {
-    const currentConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig = Object.assign({}, defaultTableConfig, config)
     const rows = item.data.content.map((rowArray: string[], index: number) => {
         const rowItems = rowArray.map((text: string, index2: number) =>
             item.data.withHeadings && index === 0 ?

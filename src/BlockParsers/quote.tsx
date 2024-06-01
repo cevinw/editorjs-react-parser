@@ -27,7 +27,7 @@ export type QuoteConfig = {
     }
 }
 
-const defaultConfig: QuoteConfig = {
+const defaultQuoteConfig: QuoteConfig = {
     classNames: {
         alignCenter: "text-center",
         alignRight: "text-right",
@@ -43,7 +43,7 @@ export interface QuoteProps {
 }
 
 const QuoteBlock = ({item, config}: QuoteProps): React.JSX.Element => {
-    const currentConfig: QuoteConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig: QuoteConfig = Object.assign({}, defaultQuoteConfig, config)
     return <p className={{
         [QuoteAlignment.left]: currentConfig.classNames.alignLeft,
         [QuoteAlignment.center]: currentConfig.classNames.alignCenter,

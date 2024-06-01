@@ -49,7 +49,7 @@ export type CodeConfig = {
 
 }
 
-const defaultConfig: CodeConfig = {
+const defaultCodeConfig: CodeConfig = {
     classNames: {
         container: "text-sm rounded-md overflow-hidden shadow-sm mt-2",
         languageInfoBar: "flex px-1 py-1 items-center bg-gray-300/15",
@@ -66,7 +66,7 @@ export interface CodeProps {
 }
 
 const CodeBlock = ({item, config}: CodeProps): React.JSX.Element => {
-    const currentConfig: CodeConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig: CodeConfig = Object.assign({}, defaultCodeConfig, config)
     const language: CodeLanguage | undefined = currentConfig.languages?.find(
         it =>
             it.shortName === item.data.mode ||

@@ -12,7 +12,7 @@ export type DelimiterConfig = {
     }
 }
 
-const defaultConfig: DelimiterConfig = {
+const defaultDelimiterConfig: DelimiterConfig = {
     classNames: {
         container: "grid my-8",
         delimiter: "w-1/3 justify-self-center"
@@ -25,7 +25,7 @@ export interface DelimiterProps {
 }
 
 const DelimiterBlock = ({item, config}: DelimiterProps) : React.JSX.Element  => {
-    const currentConfig: DelimiterConfig = Object.assign({}, defaultConfig, item)
+    const currentConfig: DelimiterConfig = Object.assign({}, defaultDelimiterConfig, item)
     return <section key={item.id} className={currentConfig.classNames?.container}>
         <hr className={currentConfig.classNames?.delimiter}></hr>
     </section>

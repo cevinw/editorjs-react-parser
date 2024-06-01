@@ -22,7 +22,7 @@ export type ListConfig = {
     }
 }
 
-const defaultConfig: ListConfig = {
+const defaultListConfig: ListConfig = {
     classNames: {
         unordered: "list-disc",
         ordered: "list-decimal",
@@ -35,7 +35,7 @@ export interface ListProps {
 }
 
 const ListBlock = ({item, config}: ListProps): React.JSX.Element => {
-    const currentClasses = Object.assign({}, defaultConfig, config).classNames
+    const currentClasses = Object.assign({}, defaultListConfig, config).classNames
     const listElements: React.JSX.Element[] = item.data.items.map((text: string, index: number) =>
         <li className={
             item.data.style == ListStyle.unordered ? currentClasses.unordered : currentClasses.ordered}

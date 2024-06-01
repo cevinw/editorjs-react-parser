@@ -2,8 +2,8 @@
   "name": "editorjs-next-renderer",
   "version": "1.0.0",
   "description": "A renderer for editorjs block data for next",
-  "main": "dist/BlockRenderer.js.js",
-  "types": "dist/BlockRendererts.d.ts",
+  "main": "dist/BlockRenderer.js",
+  "types": "dist/BlockRenderer.d.ts",
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
@@ -14,7 +14,11 @@
     "url": "git+https://github.com/cevinw/editorjs-next-renderer.git"
   },
   "keywords": [
-    "NextJs"
+    "NextJs",
+    "editorjs",
+    "parser",
+    "renderer",
+    "react"
   ],
   "author": "Cevin Wahlstedt",
   "license": "BSD-3-Clause",
@@ -23,8 +27,6 @@
   },
   "homepage": "https://github.com/cevinw/editorjs-next-renderer#readme",
   "devDependencies": {
-    "@eslint/compat": "^1.0.1",
-    "@eslint/js": "^9.3.0",
     "@testing-library/react": "^15.0.7",
     "@types/node": "^20.12.12",
     "@types/react": "^18.3.3",
@@ -40,11 +42,9 @@
     "vitest": "^1.6.0"
   },
   "dependencies": {
-    "@types/rollup": "^0.54.0",
     "html-react-parser": "^5.1.10",
     "next": "^14.2.3",
     "react": "^18.3.1",
-    "react-syntax-highlighter": "^15.5.0",
-    "rollup": "^4.18.0"
+    "react-syntax-highlighter": "^15.5.0"
   }
 }

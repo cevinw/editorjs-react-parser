@@ -27,7 +27,7 @@ export type ImageConfig = {
     },
 }
 
-const defaultConfig : ImageConfig = {
+const defaultImageConfig : ImageConfig = {
     classNames: {
         image: "rounded justify-self-center dark:dark:opacity-75",
         container: "grid mt-2"
@@ -44,7 +44,7 @@ export interface ImageProps {
 }
 
 const ImageBlock = ({item, config}: ImageProps) : React.JSX.Element  => {
-    const currentConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig = Object.assign({}, defaultImageConfig, config)
     return <section className={currentConfig.classNames?.container}>
         <Image className={currentConfig.classNames?.image}
                alt={item.data.caption}

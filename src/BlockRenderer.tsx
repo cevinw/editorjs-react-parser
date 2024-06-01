@@ -49,7 +49,7 @@ export type BlockId = string;
 export type BlockToolData<T extends object = any> = T;
 export type BlockTuneData = any;
 
-const BlockRenderer = ({data, config}: ArticleRenderProps) =>
+export const BlockRenderer = ({data, config}: ArticleRenderProps) =>
     data.blocks.map((blockData: OutputBlockData) => parseData(blockData, config));
 
 const parseData = (item: OutputBlockData, config?: BlockRendererConfig): React.JSX.Element => {

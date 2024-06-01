@@ -21,7 +21,7 @@ export type ColumnsConfig = {
     }
 }
 
-const defaultConfig: ColumnsConfig = {
+const defaultColumnsConfig: ColumnsConfig = {
     classNames: {
         outerContainer: "grid gap-4",
         innerBlocksContainers: "self-center",
@@ -38,7 +38,7 @@ export interface ColumnsProps {
 
 
 const ColumnsBlock = ({item, config, blockRendererConfig}: ColumnsProps): React.JSX.Element => {
-    const currentConfig: ColumnsConfig = Object.assign({}, defaultConfig, config)
+    const currentConfig: ColumnsConfig = Object.assign({}, defaultColumnsConfig, config)
 
     const cols = item.data.cols.length;
     const innerBlocks = item.data.cols.map((col: OutputData, index: number) =>

@@ -14,12 +14,12 @@ interface ErrorProps {
     config?: ErrorConfig
 }
 
-const defaultConfig: ErrorConfig = {
+const defaultErrorConfig: ErrorConfig = {
     className: "mt-2 p-2 bg-red-300 text-red-900",
 }
 
 const ErrorBlock = ({item, config}: ErrorProps) : React.JSX.Element => {
-    const currentConfig : ErrorConfig = Object.assign({}, defaultConfig, config);
+    const currentConfig : ErrorConfig = Object.assign({}, defaultErrorConfig, config);
     return <div key={item.id} className={currentConfig.className}>ERROR: Can&apos;t parse item of
         type={item.type}</div>;
 };
