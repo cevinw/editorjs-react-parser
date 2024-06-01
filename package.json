@@ -1,6 +1,6 @@
 {
   "name": "editorjs-next-renderer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A renderer for editorjs block data for next",
   "main": "dist/BlockRenderer.js",
   "types": "dist/BlockRenderer.d.ts",
