@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import railcasts from "react-syntax-highlighter/dist/esm/styles/hljs/railscasts";
 import {OutputBlockData} from "../BlockParser";
