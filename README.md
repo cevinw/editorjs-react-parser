@@ -31,7 +31,7 @@ This whole component can function as both a server component or client component
 > If you wish to use the default tailwind styling include this in your tailwind.config file
 > ```json
 > "content": [
->   "./node_modules/editorjs-react-parser/dist/*/**.{js,ts}",
+>   "./node_modules/editor-react-parser/dist/*/**.{js,ts}",
 > ]
 > ```
 
