@@ -24,8 +24,8 @@ export type ListConfig = {
 
 const defaultListConfig: ListConfig = {
     classNames: {
-        unordered: "list-disc",
-        ordered: "list-decimal",
+        unordered: "list-disc ml-7",
+        ordered: "list-decimal ml-7",
     }
 }
 
