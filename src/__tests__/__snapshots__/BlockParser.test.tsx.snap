@@ -71,7 +71,7 @@ exports[`BlockParser tests > Block renderer snapshot test 1`] = `
     test
   </p>
   <section
-    class="grid gap-4 grid-cols-2"
+    class="mt-2 grid gap-4 grid-cols-2"
   >
     <div
       class="self-center"
@@ -123,7 +123,7 @@ exports[`BlockParser tests > Block renderer snapshot test 1`] = `
     </tbody>
   </table>
   <figure
-    class="p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg bg-gray-300 text-gray-600"
+    class="mt-2 p-2 mt-2 px-4 flex bg-opacity-50 shadow-sm rounded-lg mt-2 bg-gray-300 text-gray-600"
   >
     <figcaption
       class="text-right"
@@ -131,8 +131,8 @@ exports[`BlockParser tests > Block renderer snapshot test 1`] = `
       test
     </figcaption>
   </figure>
-  <h1>
+  <h2>
     test
-  </h1>
+  </h2>
 </div>
 `;

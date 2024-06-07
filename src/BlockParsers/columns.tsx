@@ -23,7 +23,7 @@ export type ColumnsConfig = {
 
 const defaultColumnsConfig: ColumnsConfig = {
     classNames: {
-        outerContainer: "grid gap-4",
+        outerContainer: "mt-2 grid gap-4",
         innerBlocksContainers: "self-center",
         twoColumns: "grid-cols-2",
         threeColumns: "grid-cols-3",

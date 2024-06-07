@@ -19,9 +19,9 @@ export interface HeaderProps {
 const HeaderBlock = ({item}: HeaderProps): React.JSX.Element => {
 
     return {
-        2: <h1 key={item.id}>{parse(item.data.text)}</h1>,
-        3: <h2 key={item.id}>{parse(item.data.text)}</h2>,
-        4: <h3 key={item.id}>{parse(item.data.text)}</h3>,
+        2: <h2 key={item.id}>{parse(item.data.text)}</h2>,
+        3: <h3 key={item.id}>{parse(item.data.text)}</h3>,
+        4: <h4 key={item.id}>{parse(item.data.text)}</h4>,
     }[item.data.level] || <h1 key={item.id}>{parse(item.data.text)}</h1>
 };
 
