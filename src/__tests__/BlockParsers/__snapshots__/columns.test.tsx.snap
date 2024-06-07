@@ -3,7 +3,7 @@
 exports[`Column block tests > Should parse column block 1`] = `
 <div>
   <section
-    class="mt-2 grid gap-4 grid-cols-2"
+    class="mt-2 grid gap-4 md:grid-cols-2"
   >
     <div
       class="self-center"
@@ -77,7 +77,7 @@ exports[`Column block tests > Should parse column block 1`] = `
         test
       </p>
       <section
-        class="mt-2 grid gap-4 grid-cols-2"
+        class="mt-2 grid gap-4 md:grid-cols-2"
       >
         <div
           class="self-center"
@@ -213,7 +213,7 @@ exports[`Column block tests > Should parse column block 1`] = `
         test
       </p>
       <section
-        class="mt-2 grid gap-4 grid-cols-2"
+        class="mt-2 grid gap-4 md:grid-cols-2"
       >
         <div
           class="self-center"

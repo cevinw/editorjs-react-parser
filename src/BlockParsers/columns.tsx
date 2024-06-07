@@ -25,8 +25,8 @@ const defaultColumnsConfig: ColumnsConfig = {
     classNames: {
         outerContainer: "mt-2 grid gap-4",
         innerBlocksContainers: "self-center",
-        twoColumns: "grid-cols-2",
-        threeColumns: "grid-cols-3",
+        twoColumns: "md:grid-cols-2",
+        threeColumns: "lg:grid-cols-3 md:grid-cols-2",
     }
 }
 
