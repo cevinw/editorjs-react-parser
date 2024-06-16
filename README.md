@@ -19,6 +19,7 @@ The goal is to support all block types and tunes specified in the [awesome list]
 - [@rxpm/editor-js-code](https://github.com/rajatxs/editor-js-code)
 - [@calumk/editorjs-columns](https://github.com/calumk/editorjs-columns)
 - [@editorjs/text-variant-tune](https://github.com/editor-js/text-variant-tune)
+- [@editorjs/raw](https://github.com/editor-js/raw)
 
 This whole component can function as both a server component or client component.
 
