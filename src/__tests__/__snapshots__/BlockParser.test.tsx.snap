@@ -71,7 +71,7 @@ exports[`BlockParser tests > Block renderer snapshot test 1`] = `
     test
   </p>
   <section
-    class="mt-2 grid gap-4 md:grid-cols-2"
+    class="my-2 md:grid md:gap-4 md:grid-cols-2"
   >
     <div
       class="self-center"

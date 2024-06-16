@@ -1,6 +1,6 @@
 {
   "name": "editor-react-parser",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A renderer for editorjs block data for react",
   "main": "dist/BlockParser.js",
   "types": "dist/BlockParser.d.ts",

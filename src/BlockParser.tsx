@@ -10,6 +10,7 @@ import QuoteBlock, {QuoteConfig} from "./BlockParsers/quote";
 import TableBlock, {TableConfig} from "./BlockParsers/table";
 import ListBlock, {ListConfig} from "./BlockParsers/list";
 import ErrorBlock, {ErrorConfig} from "./BlockParsers/error";
+import Raw from "./BlockParsers/raw";
 
 
 export interface BlockParserProps {
@@ -54,6 +55,7 @@ export const BlockParser = ({data, config}: BlockParserProps) =>
 
 const parseData = (item: OutputBlockData, config?: BlockParserConfig): React.JSX.Element => {
     return {
+        "raw": <Raw key={item.id} item={item}/>,
         "header": <HeaderBlock key={item.id} item={item}/>,
         "code": <CodeBlock key={item.id} item={item} config={config?.code}/>,
         "list": <ListBlock key={item.id} item={item} config={config?.list}/>,
