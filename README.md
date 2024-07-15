@@ -52,7 +52,7 @@ If you are using typescript you can use the included type BlockParserConfig to g
 
 ```tsx
 import React from 'react';
-import BlockParser, {OutputData} from "editorjs-react-parser"
+import BlockParser, {OutputData} from "editor-react-parser"
 
 const Example = () => {
     const editorJsData :OutputData  = {version: "2.29.1", time: new Date().getTime(), blocks: [
