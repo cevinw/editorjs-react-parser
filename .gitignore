@@ -7,6 +7,7 @@ node_modules/**
 # IDE folders
 .idea
 .vscode
+.history
 
 # Test coverage report
 coverage
