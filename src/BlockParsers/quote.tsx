@@ -34,7 +34,7 @@ const defaultQuoteConfig: QuoteConfig = {
         alignCenter: "text-center",
         alignRight: "text-right",
         alignLeft: "text-left",
-        alignJustify: "text-left",
+        alignJustify: "text-justify",
         quote: "italic text-lg",
         caption: "opacity-85 text-sm"
     }
