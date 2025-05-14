@@ -21,8 +21,8 @@ export type ImageConfig = {
         image?: string,
     },
     dimensions?: {
-        width?: number,
-        height?: number,
+        width?: number | string,
+        height?: number | string,
     },
 }
 
@@ -47,8 +47,7 @@ const ImageBlock = ({item, config}: ImageProps) : React.JSX.Element  => {
     return <section className={currentConfig.classNames?.container}>
         <img className={currentConfig.classNames?.image}
                alt={item.data.caption}
-               width={currentConfig.dimensions?.width}
-               height={currentConfig.dimensions?.height}
+               style={{ width: currentConfig.dimensions?.width, height: currentConfig.dimenstions?.height}}
                src={item.data.file.url}
         />
     </section>
