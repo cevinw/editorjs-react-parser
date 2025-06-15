@@ -9,7 +9,7 @@ exports[`BlockParser tests > Block renderer snapshot test 1`] = `
       alt=""
       class="rounded justify-self-center dark:dark:opacity-75"
       src="http://test.test.png"
-      style="width: 500px;"
+      style="width: 500px; height: 500px;"
     />
   </section>
   <p
