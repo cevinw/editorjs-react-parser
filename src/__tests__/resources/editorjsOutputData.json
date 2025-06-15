@@ -35,10 +35,7 @@
         "type": "list",
         "data": {
           "style": "ordered",
-          "items": [
-            "test",
-            "test2"
-          ]
+          "items": ["test", "test2"]
         }
       },
       {
@@ -97,14 +94,8 @@
         "data": {
           "withHeadings": true,
           "content": [
-            [
-              "test",
-              "test"
-            ],
-            [
-              "test",
-              "test"
-            ]
+            ["test", "test"],
+            ["test", "test"]
           ]
         }
       },

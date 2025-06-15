@@ -14,9 +14,8 @@ exports[`Column block tests > Should parse column block 1`] = `
         <img
           alt=""
           class="rounded justify-self-center dark:dark:opacity-75"
-          height="500"
           src="http://test.test.png"
-          width="500"
+          style="width: 500px;"
         />
       </section>
       <p
@@ -150,9 +149,8 @@ exports[`Column block tests > Should parse column block 1`] = `
         <img
           alt=""
           class="rounded justify-self-center dark:dark:opacity-75"
-          height="500"
           src="http://test.test.png"
-          width="500"
+          style="width: 500px;"
         />
       </section>
       <p

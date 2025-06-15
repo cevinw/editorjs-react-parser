@@ -7,7 +7,10 @@
   "scripts": {
     "start": "tsc -w",
     "build": "tsc",
-    "test": "vitest"
+    "test": "vitest --run",
+    "format": "prettier . --write",
+    "type-check": "tsc --noEmit",
+    "check-format": "prettier . --check"
   },
   "repository": {
     "type": "git",
@@ -21,7 +24,8 @@
     "editorjs",
     "parser",
     "renderer",
-    "react"
+    "react",
+    "editor"
   ],
   "author": "Cevin Wahlstedt",
   "license": "BSD-3-Clause",
@@ -49,6 +53,7 @@
   },
   "dependencies": {
     "html-react-parser": "^5.2.3",
+    "prettier": "^3.5.3",
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-syntax-highlighter": "^15.6.1"
